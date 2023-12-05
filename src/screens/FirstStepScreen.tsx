@@ -37,20 +37,33 @@ const FirstStepScreen: React.FC<FirstStepScreenProps> = () => {
       </View>
 
       <View style={styles.quoteContainer}>
+        <View style={styles.verticalLine}></View>
         <Text>
           All our dreams can come true, if we have the courage to pursue them.{' '}
         </Text>
-        <Text>Brainy quotes</Text>
       </View>
+      <Text style={{paddingLeft: 20}}>Brainy quotes</Text>
+      <View style={{marginHorizontal: 20, marginVertical: 40}}>
+        <Text
+          style={{
+            color: '#333',
+            fontFamily: 'Circular Std',
+            fontSize: 20,
+            fontStyle: 'normal',
+            fontWeight: '450',
+            lineHeight: 25,
+            letterSpacing: 0.38,
+            paddingHorizontal: 10,
+            marginBottom: 10,
+          }}>
+          This journey begins with us helping you make small behavioral changes,
+          one day at a time.
+        </Text>
 
-      <Text style={styles.mediumText}>
-        This journey begins with us helping you make small behavioral changes,
-        one day at a time.
-      </Text>
-
-      <Text style={styles.mediumText}>
-        What habit can you commit to for a start?
-      </Text>
+        <Text style={styles.mediumText}>
+          What habit can you commit to for a start?
+        </Text>
+      </View>
 
       <View style={styles.buttonContainer}>
         <PrimaryButton text="Let’s go" onPress={handleLetsGo} />
@@ -63,6 +76,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#E0F4FB',
     flex: 1,
+    paddingHorizontal: 10,
   },
   backButton: {
     marginLeft: 20,
@@ -78,10 +92,6 @@ const styles = StyleSheet.create({
     lineHeight: 34,
     letterSpacing: 0.338,
   },
-  quoteContainer: {
-    marginBottom: 20,
-    paddingHorizontal: 20,
-  },
   mediumText: {
     color: '#333',
     fontFamily: 'Circular Std',
@@ -90,12 +100,25 @@ const styles = StyleSheet.create({
     fontWeight: '450',
     lineHeight: 25,
     letterSpacing: 0.38,
-    paddingHorizontal: 20,
+    marginTop:20,
+    paddingHorizontal: 10,
   },
   buttonContainer: {
     alignItems: 'center',
     marginBottom: 50,
-    marginTop: 450,
+    marginTop: 320,
+  },
+  quoteContainer: {
+    flexDirection: 'row',
+    paddingLeft: 10,
+    borderLeftWidth: 2,
+    borderLeftColor: 'black',
+    marginHorizontal: 20,
+    marginBottom: 20,
+    paddingHorizontal: 20,
+  },
+  verticalLine: {
+    height: '100%',
   },
 });
 
